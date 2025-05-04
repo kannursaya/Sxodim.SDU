@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sxodim.SDU - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="homepage.css">
+    <script src="auth/auth.js" defer></script>
+</head>
+<body>
+    <div class="container">
+
+        <!-- Navbar -->
+        <nav class="navbar">
+            <span class="logo">Sxodim.SDU</span>
+            <div class="nav-links">
+                <a href="homepage.html" class="active">Homepage</a>
+                <a href="events.html">Events</a>
+                <a href="clubs.html">Clubs</a>
+                <a href="map.html">Map</a>
+                <a href="social_gpa.html">Social GPA</a>
+                <a href="auth/register.html" class="sign-in-link">Sign Up</a>
+                <a href="auth/login.html" class="log-in-link">Log In</a>
+                <a href="my_profile.html" class="profile-link">My Profile</a>
+                <a href="my_tickets.html" class="tickets-link">My Tickets</a>
+                <a href="#" class="log-out-link">Log Out</a>
+            </div>
+        </nav>
+        
+        <script>
+            // Check if the user is logged in
+            const loggedInUser = localStorage.getItem("loggedInUser");
+        
+            if (loggedInUser) {
+                // If logged in, show profile, tickets, and logout options
+                document.querySelector('.sign-in-link').style.display = 'none';
+                document.querySelector('.log-in-link').style.display = 'none';
+                document.querySelector('.profile-link').style.display = 'inline-block';
+                document.querySelector('.tickets-link').style.display = 'inline-block';
+                document.querySelector('.log-out-link').style.display = 'inline-block';
+            } else {
+                // If not logged in, show login/sign up options
+                document.querySelector('.sign-in-link').style.display = 'inline-block';
+                document.querySelector('.log-in-link').style.display = 'inline-block';
+                document.querySelector('.profile-link').style.display = 'none';
+                document.querySelector('.tickets-link').style.display = 'none';
+                document.querySelector('.log-out-link').style.display = 'none';
+            }
+        
+            // Log out functionality
+            document.querySelector('.log-out-link').addEventListener('click', function () {
+                localStorage.removeItem("loggedInUser");
+                alert("Logged out successfully!");
+                window.location.href = "auth/login.html"; // Redirect to login page
+            });
+        </script>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-quote">“SDU is where your journey begins. Dream big, build bigger!”</div>
+        </section>
+
+        <!-- News Section -->
+        <section class="news-section">
+            <h2 class="events-title">Upcoming Events</h2>
+            <div class="news-container">
+                <div class="news-card">
+                    <img src="images/event1.jpg" alt="Event 1">
+                    <div class="news-content">
+                        <h3>Open Air</h3>
+                        <p class="news-date">📅 25th April, 2025</p>
+                        <button class="buy-button" onclick="redirectToQRCode(1)">Buy</button>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <img src="images/event2.jpg" alt="Event 2">
+                    <div class="news-content">
+                        <h3>Dance by the Moonlight</h3>
+                        <p class="news-date">📅 18th April, 2025</p>
+                        <button class="buy-button" onclick="redirectToQRCode(2)">Buy</button>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <img src="images/event3.jpg" alt="Event 3">
+                    <div class="news-content">
+                        <h3>Welcome Party</h3>
+                        <p class="news-date">📅 1st January, 2025</p>
+                        <button class="buy-button" onclick="redirectToQRCode(8)">Buy</button>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <img src="images/event4.jpg" alt="Event 4">
+                    <div class="news-content">
+                        <h3>SDU Awards</h3>
+                        <p class="news-date">📅 2nd May, 2025</p>
+                        <button class="buy-button" onclick="redirectToQRCode(8)">Buy</button>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <img src="images/event5.jpg" alt="Event 5">
+                    <div class="news-content">
+                        <h3>Ne Prosto Dombra</h3>
+                        <p class="news-date">📅 22nd April, 2025</p>
+                        <button class="buy-button" onclick="redirectToQRCode(8)">Buy</button>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <img src="images/event6.jpg" alt="Event 6">
+                    <div class="news-content">
+                        <h3>WE Code</h3>
+                        <p class="news-date">📅 2nd April, 2025</p>
+                        <button class="buy-button" onclick="redirectToQRCode(8)">Buy</button>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <img src="images/event7.jpg" alt="Event 7">
+                    <div class="news-content">
+                        <h3>Mental Health Week</h3>
+                        <p class="news-date">📅 2nd May, 2025</p>
+                        <button class="buy-button" onclick="redirectToQRCode(8)">Buy</button>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <img src="images/event8.jpg" alt="Event 8">
+                    <div class="news-content">
+                        <h3>President</h3>
+                        <p class="news-date">📅 2nd May, 2025</p>
+                        <button class="buy-button" onclick="redirectToQRCode(8)">Buy</button>
+                    </div>
+                </div>
+            </div>
+            <div class="more-events-button">
+                <a href="events.html"><button>More Events</button></a>
+            </div>
+        </section>
+    <section class="feedbacks-section">
+        <h2 class="feedbacks-title">Feedbacks</h2>
+        <div class="feedbacks-list" id="feedbacks-list">
+            <!-- Feedback cards will be inserted here by JS -->
+        </div>
+    </section>
+    <section class="sdu-game-section">
+        <h2 class="sdu-game-title">SDU Game</h2>
+        <div class="sdu-game-container">
+            <!-- Left side with the game map -->
+            <div class="sdu-game-map-container">
+                <img src="images/map1.png" alt="SDU Game Map" class="sdu-game-map">
+            </div>
+            <!-- Right side with the game functions -->
+            <div class="sdu-game-functions">
+                <h3>SDU Game Features</h3>
+                <ul>
+                    <li><strong>Explore the Campus:</strong> Navigate through a Minecraft-like map of SDU and discover key areas.</li>
+                    <li><strong>Complete Challenges:</strong> Embark on missions, solve puzzles, and complete tasks to unlock rewards.</li>
+                    <li><strong>Earn Social GPA:</strong> The more you play, the higher your Social GPA becomes.</li>
+                    <li><strong>Unlock Achievements:</strong> Collect badges and trophies for completing tasks and challenges.</li>
+                    <li><strong>Leaderboards:</strong> Compete with your peers and climb the rankings based on your progress and achievements.</li>
+                </ul>
+                <button class="buy-button" onclick="redirectToTelegram()">Telegram Bot</button>
+            </div>
+            <script>
+                function redirectToTelegram() {
+                    // Replace this link with the actual Telegram Bot link
+                    const telegramBotURL = "https://t.me/jobjobjob228_bot"; 
+                    window.location.href = telegramBotURL;
+                }
+            </script>
+        </div>
+    </section>
+    <section class="sdu-products-section">
+        <h2 class="sdu-products-title">SDU Products</h2>
+        <div class="sdu-products-container">
+            <div class="product-item">
+                <img src="images/product1.jpg" alt="Product 1" class="product-image">
+                <button class="buy-button" onclick="redirectToQRCode(1)">Buy</button>
+            </div>
+            <div class="product-item">
+                <img src="images/product2.jpg" alt="Product 2" class="product-image">
+                <button class="buy-button" onclick="redirectToQRCode(2)">Buy</button>
+            </div>
+            <div class="product-item">
+                <img src="images/product3.jpg" alt="Product 3" class="product-image">
+                <button class="buy-button" onclick="redirectToQRCode(3)">Buy</button>
+            </div>
+            <div class="product-item">
+                <img src="images/product4.jpg" alt="Product 4" class="product-image">
+                <button class="buy-button" onclick="redirectToQRCode(4)">Buy</button>
+            </div>
+            <div class="product-item">
+                <img src="images/product5.jpg" alt="Product 5" class="product-image">
+                <button class="buy-button" onclick="redirectToQRCode(5)">Buy</button>
+            </div>
+            <div class="product-item">
+                <img src="images/product6.jpg" alt="Product 6" class="product-image">
+                <button class="buy-button" onclick="redirectToQRCode(6)">Buy</button>
+            </div>
+            <div class="product-item">
+                <img src="images/product7.jpg" alt="Product 7" class="product-image">
+                <button class="buy-button" onclick="redirectToQRCode(7)">Buy</button>
+            </div>
+            <div class="product-item">
+                <img src="images/product9.jpg" alt="Product 9" class="product-image">
+                <button class="buy-button" onclick="redirectToQRCode(9)">Buy</button>
+            </div>
+        </div>
+    </section>
+    <section class="sdu-canteen-section">
+        <h2 class="sdu-canteen-title">SDU Canteen</h2>
+        <div class="sdu-canteen-container">
+            <div class="canteen-item">
+                <img src="images/menu1.png" alt="Menu 1" class="canteen-image">
+                <p class="canteen-description">Menu 1</p>
+            </div>
+            <div class="canteen-item">
+                <img src="images/menu2.png" alt="Menu 2" class="canteen-image">
+                <p class="canteen-description">Menu 2 </p>
+            </div>
+        </div>
+    </section>
+    <script>
+        function redirectToQRCode(eventID) {
+            // Pass the event ID to the QR code page
+            window.location.href = "qr_code.html?eventID=" + eventID; 
+        }
+        function redirectToQRCode(productID) {
+            // Redirect to the QR code page with the product ID as a query parameter
+            window.location.href = "qrcode_clothes.html?productID=" + productID; 
+        }
+    </script>
+    <script src="homepage.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    background: url('images/mainback.jpg') center/cover no-repeat;
+    font-family: 'Press Start 2P', cursive;
+    color: #fff;
+    text-align: center;
+}
+
+/* QR Code Section */
+.qr-section {
+    padding: 50px 2rem;
+    min-height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.qr-container {
+    background: #22223b;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 16px #0003;
+    max-width: 400px;
+}
+
+.qr-container h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.qr-image-container {
+    margin: 20px 0;
+}
+
+.qr-code {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #fff;
+    border-radius: 8px;
+}
+
+.qr-description {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
+    color: #fff;
+    padding: 10px;
+    background: #22223b;
+}

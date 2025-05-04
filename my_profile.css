@@ -1,0 +1,130 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body and Background */
+  body {
+    font-family: 'Press Start 2P', cursive;
+    background: url('images/mainback.jpg') center/cover no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* Profile Header */
+  .profile-header {
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .profile-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  
+  .profile-info h2 {
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  /* Profile Actions (Column Layout) */
+  .profile-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 20px;
+    margin-top: 20px;
+    width: 80%;
+    max-width: 400px;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: block;
+  }
+  
+  .dropbtn {
+    background-color: #7da0c4;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    width: 100%;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-content p {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: #333;
+  }
+  
+  .dropdown-content p:hover {
+    background-color: #ddd;
+  }
+  
+  /* Booking Section */
+  .booking {
+    padding: 20px;
+    background-color: #cce6ff;
+    margin-top: 20px;
+    width: 80%;
+    max-width: 400px;
+  }
+  
+  .space {
+    display: flex;
+    justify-content: space-between;
+    background-color: #4CAF50;
+    color: white;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  
+  .book-btn {
+    background-color: #f44336;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .book-btn:hover {
+    background-color: #da190b;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    margin-top: auto;
+  }
+  

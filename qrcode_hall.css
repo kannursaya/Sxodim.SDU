@@ -1,0 +1,29 @@
+body {
+    
+    padding: 50px;
+    background: url('images/mainback.jpg') center/cover no-repeat;
+    font-family: 'Press Start 2P', cursive;
+    color: #fff;
+    text-align: center;
+}
+
+.qr-code-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#qr-code {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+footer {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #555;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+    <link rel="stylesheet" href="my_profile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Profile Header -->
+<div class="profile-header">
+    <img src="images/avatar.png" alt="Student Avatar" class="profile-avatar">
+    <div class="profile-info">
+        <h2>@kannursaya</h2>
+        <p>Major: Computer Science</p>
+        <p>Course: Data Science</p>
+    </div>
+</div>
+
+<!-- Profile Actions (Column Layout) -->
+<div class="profile-actions">
+    <div class="dropdown">
+        <button class="dropbtn">My Events</button>
+        <div class="dropdown-content">
+            <p>A-concert - 5 points</p>
+            <p>Football Match - 3 points</p>
+            <p>Art Club Therapy Night - 7 points</p>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn">My Points</button>
+        <div class="dropdown-content">
+            <p>Total Points: 15</p>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button class="dropbtn">Book Space</button>
+        <div class="dropdown-content">
+            <p>Red Hall</p>
+            <p>Blue Hall</p>
+        </div>
+    </div>
+</div>
+
+<!-- Booking -->
+<div class="booking">
+    <h3>Available Spaces:</h3>
+    <div class="space">
+        <h4>Red Hall</h4>
+        <button class="book-btn" onclick="redirectToQRCode('red-hall')">Book</button>
+    </div>
+    <div class="space">
+        <h4>Blue Hall</h4>
+        <button class="book-btn" onclick="redirectToQRCode('blue-hall')">Book</button>
+    </div>
+</div>
+<script>
+    function redirectToQRCode(space) {
+        // Redirect to the QR code page with the appropriate space parameter
+        window.location.href = `qrcode_hall.html?space=${space}`;
+    }
+</script>
+
+<!-- Footer -->
+
+<script src="script.js"></script>
+</body>
+</html>

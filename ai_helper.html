@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <title>SDUdentHelper</title>
+
+  <!-- Link to Dialogflow's default Messenger CSS -->
+  <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+
+  <!-- Dialogflow Messenger JavaScript -->
+  <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body and Background */
+    body {
+      font-family: 'Press Start 2P', cursive; /* Changed font */
+      background: url('images/mainback.jpg') center/cover no-repeat; /* Background image */
+      color: #fff;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* Navbar Style */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #7da0c4;
+      padding: 1rem 2rem;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      font-size: 1rem;
+    }
+
+    .logo {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #fff;
+      margin-right: 2rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: lowercase;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #b39ddb;
+    }
+
+    /* Dialogflow Chatbot Style */
+    df-messenger {
+      z-index: 999;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 350px;
+      height: 500px;
+      font-family: 'Press Start 2P', cursive; /* Updated font */
+      --df-messenger-font-color: #333;
+      --df-messenger-font-family: 'Roboto Mono', monospace;
+      --df-messenger-chat-background: #C6DAFC;
+      --df-messenger-message-user-background: #d3e3fd;
+      --df-messenger-message-bot-background: #fff;
+      --df-messenger-send-icon-color: #3a5ca8;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <span class="logo">Sxodim.SDU</span>
+    <div class="nav-links">
+      <a href="homepage.html" class="active">Homepage</a>
+      <a href="events.html">Events</a>
+      <a href="clubs.html">Clubs</a>
+      <a href="map.html">Map</a>
+      <a href="social_gpa.html">Social GPA</a>
+      <a href="ai_helper.html">AI Helper</a>
+      <a href="auth/register.html">Sign In</a>
+      <a href="auth/login.html">Log In</a>
+    </div>
+  </nav>
+
+  <!-- Website Content -->
+  
+  <!-- Dialogflow Messenger Integration -->
+  <df-messenger
+    location="us-central1"
+    project-id="we-hack-458720"
+    agent-id="db11a132-d955-4b79-a7eb-741fa91324ae"
+    language-code="en"
+    max-query-length="-1">
+    <df-messenger-chat chat-title="SDUdentHelper"></df-messenger-chat>
+  </df-messenger>
+
+  <!-- Optional Footer Content -->
+  
+
+</body>
+</html>

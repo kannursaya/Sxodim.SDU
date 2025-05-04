@@ -1,0 +1,88 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    background: #22223b;
+    font-family: 'Press Start 2P', cursive;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* QR Code Section */
+.qr-code-section {
+    padding: 2rem;
+    text-align: center;
+    background-color: rgba(125, 160, 196, 0.85);
+    border-radius: 12px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.qr-code-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.qr-code-image {
+    width: 250px;
+    height: 250px;
+    margin: 20px auto;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-top: 10px;
+}
+
+/* Button Styles */
+.back-button {
+    background-color: #3a5ca8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+    border-radius: 6px;
+    margin-top: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #b39ddb;
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .back-button {
+        padding: 8px 15px;
+        font-size: 1rem;
+    }
+}

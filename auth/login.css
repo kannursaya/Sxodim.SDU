@@ -1,0 +1,98 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Full Page Background */
+body {
+    font-family: Arial, sans-serif;
+    background: url('mainback.jpg') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    position: relative;
+}
+
+/* Adding a blurred overlay */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('mainback.jpg') center/cover no-repeat;
+    filter: blur(8px);
+    z-index: -1;
+}
+
+/* Styling the login container */
+.auth-container {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    backdrop-filter: blur(10px);
+    position: relative;
+}
+
+/* Title */
+.auth-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form Inputs */
+.auth-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Login Button */
+.auth-container button {
+    width: 100%;
+    padding: 10px;
+    background: #002147;
+    border: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.auth-container button:hover {
+    background: #002147;
+}
+
+/* Signup Link */
+.auth-container p {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.auth-container a {
+    color: #002147;
+    text-decoration: none;
+}
+
+.auth-container a:hover {
+    text-decoration: underline;
+}
+
+/* Error Message */
+.error-message {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+}

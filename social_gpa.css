@@ -1,0 +1,56 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body and Background */
+  body {
+    font-family: 'Press Start 2P', cursive;
+    background: url('images/mainback.jpg') center/cover no-repeat;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative; /* Ensuring positioning */
+  }
+  
+  /* Loading container and image */
+  .loading-container {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Ensuring it's centered */
+  }
+  
+  .loading-image {
+    width: 300px;  /* Adjust size as needed */
+    height: auto;
+  }
+  
+  /* Navbar Style */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #7da0c4;
+    padding: 1rem 2rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    font-size: 1rem;
+  }
+  
+  /* Other styles unchanged */
+  

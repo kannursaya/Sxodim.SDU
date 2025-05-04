@@ -1,0 +1,387 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    font-family: 'Press Start 2P', cursive;
+}
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    line-height: 1.6;
+    background: url('images/mainback.jpg') center/cover no-repeat;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    background: #7da0c4;
+    padding: 1rem 2rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    margin-right: 2rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+nav a.active,
+nav a:hover {
+    color: #b39ddb;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: lowercase;
+    transition: color 0.2s;
+}
+
+/* Hero Section Styling */
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 600px;
+    background: url('images\\sdu-hero..jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-quote {
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 2px 2px 8px #222;
+}
+
+/* News Section Styling */
+.news-section {
+    padding: 50px 0;
+    background: rgba(125, 160, 196, 0.85);
+}
+
+.news-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.news-card {
+    position: relative;
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.news-card:hover {
+    transform: scale(1.05);
+}
+
+.news-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.news-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.news-content h3 {
+    margin: 0;
+    font-size: 1rem;
+    color: #22223b;
+}
+
+.news-date {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Button Styling */
+.buy-button {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    font-family: 'Press Start 2P', cursive;
+    transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: #45a049;
+}
+
+.more-events-button {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.more-events-button button {
+    background-color: #22223b;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+    transition: background-color 0.3s ease;
+}
+
+.more-events-button button:hover {
+    background-color: #b39ddb;
+}
+
+.feedbacks-section {
+    margin: 2rem auto;
+    max-width: 90vw;
+    background: rgba(125, 160, 196, 0.85);
+    padding: 2rem 1rem 2.5rem 1rem;
+    box-sizing: border-box;
+}
+.feedbacks-title {
+    font-size: 2.2rem;
+    font-family: 'Press Start 2P', cursive;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.feedbacks-list {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    font-family: 'Press Start 2P', cursive;
+    flex-wrap: wrap;
+}
+.feedback-card {
+    background: #f9c6f9;
+    font-family: 'Press Start 2P', cursive;
+    color: #22223b;
+    border-radius: 20px;
+    width: 200px;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    box-shadow: 0 4px 16px #0002;
+}
+.feedback-bubble {
+    background: #fff;
+    color: #22223b;
+    border: 3px solid #000;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    margin-top: 0.7rem;
+    border-radius: 8px;
+    box-shadow: 2px 2px 0 #000;
+    text-align: center;
+}
+
+
+.sdu-game-section {
+    max-width: 1200px;
+    background: rgba(125, 160, 196, 0.85);
+    padding: 2rem 1rem 2.5rem 1rem;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.sdu-game-title {
+    font-size: 2.2rem;
+    font-family: 'Press Start 2P', cursive;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.sdu-game-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    gap: 2rem; /* Space between the map and the functions */
+    flex-wrap: wrap; /* Ensure responsiveness on smaller screens */
+}
+
+.sdu-game-map-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 2rem;
+    
+}
+
+.sdu-game-map {
+    max-width: 150%;
+    max-height: 600px;
+    box-shadow: 0 4px 16px #0002;
+    background: #fff;
+}
+
+.sdu-game-functions {
+    flex: 1;
+    text-align: left;
+    padding-left: 2rem;
+}
+
+.sdu-game-functions h3 {
+    font-size: 1.8rem;
+    font-family: 'Press Start 2P', cursive;
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+
+.sdu-game-functions ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.sdu-game-functions li {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.sdu-game-functions li strong {
+    color: #b39ddb; /* Highlight the feature titles */
+
+    font-family: 'Press Start 2P', cursive;
+}
+
+
+.sdu-products-section {
+    margin: 2rem auto;
+    max-width: 1200px;
+    padding: 2rem;
+    background: rgba(125, 160, 196, 0.85);
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px #0002;
+}
+
+.sdu-products-title {
+    font-size: 2.2rem;
+    font-family: 'Press Start 2P', cursive;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.sdu-products-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+    gap: 1.5rem;
+    justify-items: center;
+}
+
+.product-item {
+    background: #b1d1f0;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 12px #0003;
+}
+
+.product-image {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px #0002;
+}
+
+.buy-button {
+    background-color: #3a5ca8;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.buy-button:hover {
+    background-color: #b39ddb;
+}
+
+
+.sdu-canteen-section {
+    margin: 2rem auto;
+    max-width: 900px;
+    padding: 2rem;
+    background: rgba(125, 160, 196, 0.85);
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px #0002;
+}
+
+.sdu-canteen-title {
+    font-size: 2.2rem;
+    font-family: 'Press Start 2P', cursive;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.sdu-canteen-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    text-align: center;
+}
+
+.canteen-item {
+    background: #ffb6c1;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 12px #0003;
+    width: 45%;
+}
+
+.canteen-image {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px #0002;
+}
+
+.canteen-description {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
+    color: #3a5ca8;
+    margin-top: 1rem;
+}
+

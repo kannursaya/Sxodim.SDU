@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <title>Clubs - Sxodim.SDU</title>
+
+  <!-- Link to Stylesheet -->
+  <link rel="stylesheet" href="clubs.css">
+
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body and Background */
+    body {
+      font-family: 'Press Start 2P', cursive;
+      background: url('images/mainback.jpg') center/cover no-repeat;
+      color: #fff;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background-attachment: fixed;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* Navbar Style */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #7da0c4;
+      padding: 1rem 2rem;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      font-size: 1rem;
+    }
+
+    .logo {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #fff;
+      margin-right: 2rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: lowercase;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #b39ddb;
+    }
+
+    /* Clubs Section */
+    .clubs-container {
+      padding: 100px 50px 50px; /* Added extra padding for top space */
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .club-card {
+      width: 300px;
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .club-card:hover {
+      transform: scale(1.05);
+    }
+
+    .club-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .club-info {
+      padding: 15px;
+      background-color: #f9f9f9;
+    }
+
+    .club-info h3 {
+      margin-bottom: 10px;
+      font-size: 1.4rem;
+      color: #22223b;
+    }
+
+    .club-info p {
+      font-size: 1rem;
+      color: #666;
+    }
+
+    .club-head {
+      margin-top: 15px;
+      background-color: #c6dafc;
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    .club-head h4 {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .club-head p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <span class="logo">Sxodim.SDU</span>
+    <div class="nav-links">
+      <a href="homepage.html">Homepage</a>
+      <a href="events.html">Events</a>
+      <a href="clubs.html" class="active">Clubs</a>
+      <a href="map.html">Map</a>
+      <a href="social_gpa.html">Social GPA</a>
+      <a href="ai_helper.html">AI Helper</a>
+      <a href="auth/signin.html">Sign In</a>
+      <a href="auth/login.html">Log In</a>
+    </div>
+  </nav>
+
+  <!-- Clubs Section -->
+  <div class="clubs-container">
+    <!-- Club 1 -->
+    <div class="club-card">
+      <img src="images/club1.jpg" alt="Club 1">
+      <div class="club-info">
+        <h3>GAP</h3>
+        <p>The GAP Stand-Up Club is the perfect place for aspiring comedians and comedy lovers. We offer a platform for members to hone their stand-up skills, perform at open mic events, and enjoy the art of humor. Whether you're here to laugh or to perform, GAP is where creativity and comedy meet.</p>
+      </div>
+      <div class="club-head">
+        <h4>Head of the Club]</h4>
+        <p>Nargiz Suleimenova, Head, gap_club@sdu.edu.kz</p>
+      </div>
+    </div>
+
+    <!-- Club 2 -->
+    <div class="club-card">
+      <img src="images/club2.jpg" alt="Club 2">
+      <div class="club-info">
+        <h3>Orlean</h3>
+        <p>The Orlean Dance Club is a vibrant space dedicated to girls who love to dance. We focus on various dance styles, from contemporary to hip-hop, providing a supportive environment for members to express themselves and grow as dancers. Join us for fun, fitness, and empowerment through movement!</p>
+      </div>
+      <div class="club-head">
+        <h4>Head of the Club</h4>
+        <p>Aisulu Marlen, Head, orlean_sdu@sdu.edu.kz</p>
+      </div>
+    </div>
+
+    <!-- Club 3 -->
+    <div class="club-card">
+      <img src="images/club3.jpg" alt="Club 3">
+      <div class="club-info">
+        <h3>Baker's Dozen</h3>
+        <p>Baker's Dozen is a dynamic dance club open to both girls and boys, offering a space for everyone to explore their passion for dance. From ballet to street dance, our club encourages creativity, teamwork, and personal growth.</p>
+      </div>
+      <div class="club-head">
+        <h4>Head of the Club</h4>
+        <p>Marat Ackhatov, Vice Head, bakers_sdu@sdu.edu.kz</p>
+      </div>
+    </div>
+
+    <!-- Club 4 -->
+    <div class="club-card">
+      <img src="images/club4.jpg" alt="Club 4">
+      <div class="club-info">
+        <h3>Music Club</h3>
+        <p>The Music Club is a vibrant community for music lovers of all backgrounds, offering a space to explore, create, and perform. Whether you're into playing instruments, singing, or producing music, this club is your perfect platform to nurture your talents. </p>
+      </div>
+      <div class="club-head">
+        <h4>Head of the Club</h4>
+        <p>Aigerim Serikova, Head, music_club@sdu.edu.kz</p>
+      </div>
+    </div>
+
+    <!-- Club 5 -->
+    <div class="club-card">
+      <img src="images/club5.jpg" alt="Club 5">
+      <div class="club-info">
+        <h3>Dombra Club</h3>
+        <p>Dombra Club celebrates the rich cultural heritage of Kazakhstan through the traditional art of playing the dombra. Open to all enthusiasts, this club provides a platform to learn, play, and showcase dombra music.</p>
+      </div>
+      <div class="club-head">
+        <h4>Head of the Club</h4>
+        <p>Aidos Kalmakan, Head, dombra_clud@sdu.edu.kz</p>
+      </div>
+    </div>
+
+    <!-- Club 6 -->
+    <div class="club-card">
+      <img src="images/club6.jpg" alt="Club 6">
+      <div class="club-info">
+        <h3>Oyan Theater</h3>
+        <p>Oyan Theater is a vibrant performing arts club dedicated to the art of drama and theater. Aimed at both aspiring actors and theater enthusiasts, this club provides opportunities to explore acting, scriptwriting, stage design, and production.</p>
+      </div>
+      <div class="club-head">
+        <h4>Head of the Club</h4>
+        <p>Nurbolat Bazarbek, Head, oyan_club@sdu.edu.kz</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

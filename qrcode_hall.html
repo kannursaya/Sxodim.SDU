@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>QR Code for Booking</title>
+    <link rel="stylesheet" href="qrcode_hall.css">
+</head>
+<body>
+
+    <!-- QR Code Section -->
+    <div class="qr-code-container">
+        <h2>Your QR Code for Booking</h2>
+        <img id="qr-code" src="images\book_space.png" alt="QR Code" />
+        <p>Scan the QR code to confirm your booking for the selected space!</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Student Portal | QR Code for Booking</p>
+    </footer>
+
+    <script>
+        // Retrieve the space parameter from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const space = urlParams.get('space');
+        
+        // Logic to update QR code image based on the space
+        const qrCodeImage = document.getElementById('qr-code');
+        
+        if (space === 'red-hall') {
+            qrCodeImage.src = 'images\\qrcode_red.png';  // Provide the red hall QR code
+        } else if (space === 'blue-hall') {
+            qrCodeImage.src = 'images\\qrcode_blue.png';  // Provide the blue hall QR code
+        } else {
+            qrCodeImage.src = 'images\\book_space.png';  // Default QR code
+        }
+    </script>
+
+</body>
+</html>

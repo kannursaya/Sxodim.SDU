@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Sxodim.SDU</title>
+    <link rel="stylesheet" href="events.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <span>Sxodim.SDU</span>
+        <a href="homepage.html">Homepage</a>
+        <a href="events.html" class="active">Events</a>
+        <a href="clubs.html">Clubs</a>
+        <a href="map.html">Map</a>
+        <a href="social_gpa.html">Social GPA</a>
+        <a href="my_profile.html" class="profile-link">My Profile</a>
+        <a href="my_tickets.html" class="tickets-link">My Tickets</a>
+        <a href="#" class="log-out-link">Log Out</a>
+    </nav>
+
+    <!-- Events Section -->
+    <section class="news-section">
+        <h2 class="events-title">Upcoming Events</h2>
+        <div class="news-container">
+            <div class="news-card">
+                <img src="images/event1.jpg" alt="Event 1">
+                <div class="news-content">
+                    <h3>Open Air</h3>
+                    <p class="news-date">📅 25th April, 2025</p>
+                    <button class="buy-button" onclick="redirectToQRCode(1)">Buy</button>
+                </div>
+            </div>
+            <div class="news-card">
+                <img src="images/event2.jpg" alt="Event 2">
+                <div class="news-content">
+                    <h3>Dance by the Moonlight</h3>
+                    <p class="news-date">📅 18th April, 2025</p>
+                    <button class="buy-button" onclick="redirectToQRCode(2)">Buy</button>
+                </div>
+            </div>
+
+            <div class="news-card">
+                <img src="images/event3.jpg" alt="Event 3">
+                <div class="news-content">
+                    <h3>Welcome party</h3>
+                    <p class="news-date">📅 1nd January, 2025</p>
+                    <button class="buy-button" onclick="redirectToQRCode(8)">Buy</button>
+                </div>
+            </div>
+            <div class="news-card">
+                <img src="images/event4.jpg" alt="Event 4">
+                <div class="news-content">
+                    <h3>SDU Awards</h3>
+                    <p class="news-date">📅 2nd May, 2025</p>
+                    <button class="buy-button" onclick="redirectToQRCode(8)">Buy</button>
+                </div>
+            </div>
+            <div class="news-card">
+                <img src="images/event5.jpg" alt="Event 5">
+                <div class="news-content">
+                    <h3>Ne Prosto Dombra</h3>
+                    <p class="news-date">📅22nd April, 2025</p>
+                    <button class="buy-button" onclick="redirectToQRCode(8)">Buy</button>
+                </div>
+            </div>
+            <div class="news-card">
+                <img src="images/event6.jpg" alt="Event 6">
+                <div class="news-content">
+                    <h3>WE Code</h3>
+                    <p class="news-date">📅 2nd April, 2025</p>
+                    <button class="buy-button" onclick="redirectToQRCode(8)">Buy</button>
+                </div>
+            </div>
+            <div class="news-card">
+                <img src="images/event7.jpg" alt="Event 7">
+                <div class="news-content">
+                    <h3>Mental health Week</h3>
+                    <p class="news-date">📅 2nd May, 2025</p>
+                    <button class="buy-button" onclick="redirectToQRCode(8)">Buy</button>
+                </div>
+            </div>
+            <div class="news-card">
+                <img src="images/event8.jpg" alt="Event 8">
+                <div class="news-content">
+                    <h3>President</h3>
+                    <p class="news-date">📅 2nd May, 2025</p>
+                    <button class="buy-button" onclick="redirectToQRCode(8)">Buy</button>
+                </div>
+            </div>
+            <div class="news-card">
+                <img src="images/event9.jpg" alt="Event 9">
+                <div class="news-content">
+                    <h3>Faculty Cup</h3>
+                    <p class="news-date">📅 17th April, 2025</p>
+                    <button class="buy-button" onclick="redirectToQRCode(8)">Buy</button>
+                </div>
+            </div>
+       
+
+        </div>
+    </section>
+
+    <!-- JavaScript for redirecting to QR Code page -->
+    <script>
+        function redirectToQRCode(eventID) {
+            // Pass the event ID to the QR code page
+            window.location.href = "qr_code.html?eventID=" + eventID; 
+        }
+    </script>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Sxodim.SDU</p>
+    </footer>
+</body>
+</html>

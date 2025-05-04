@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Tickets</title>
+  <link rel="stylesheet" href="my_tickets.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <span class="logo">Sxodim.SDU</span>
+    <div class="nav-links">
+        <a href="homepage.html">Homepage</a>
+        <a href="events.html">Events</a>
+        <a href="clubs.html">Clubs</a>
+        <a href="map.html">Map</a>
+        <a href="social_gpa.html">Social GPA</a>
+        <a href="ai_helper.html">AI Helper</a>
+        <a href="my_tickets.html" class="active">My Tickets</a>
+    </div>
+  </nav>
+
+  <!-- My Tickets Section -->
+  <div class="tickets-container">
+    <h2>My Tickets</h2>
+    <div id="tickets-list">
+      <p>No tickets purchased yet.</p>
+    </div>
+
+    <!-- QR Code Card Example -->
+    <div class="ticket-card">
+      <h4>Event: A-concert</h4>
+      <p>Ticket Type: General Admission</p>
+      <p>Status: Purchased</p>
+      <div class="qr-card">
+        <img src="images\qrcode.png" alt="QR Code" class="qr-image">
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Function to fetch and display tickets
+    function displayTickets() {
+      const ticketsList = document.getElementById("tickets-list");
+      const tickets = JSON.parse(localStorage.getItem("tickets")) || [];
+
+      if (tickets.length === 0) {
+        ticketsList.innerHTML = "<p>No tickets purchased yet.</p>";
+      } else {
+        ticketsList.innerHTML = tickets.map(ticket => `
+          <div class="ticket">
+            <h4>${ticket.hall} - ${ticket.date}</h4>
+            <p>Ticket Type: ${ticket.type}</p>
+            <p>Status: ${ticket.status}</p>
+            <div class="qr-card">
+              <img src="${ticket.qrCode}" alt="QR Code" class="qr-image">
+            </div>
+          </div>
+        `).join('');
+      }
+    }
+
+    // Call the function to display tickets when the page loads
+    displayTickets();
+  </script>
+
+</body>
+</html>
