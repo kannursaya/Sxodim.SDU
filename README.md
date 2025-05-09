@@ -1,7 +1,7 @@
 # Sxodim.SDU
-<<<<<<< HEAD
+HEAD
 
-Event management system for SDU (Suleyman Demirel University).
+Event management system for SDU (Suleyman Demirel University) "WE HACK" Hackathon Project.
 
 ## Features
 
