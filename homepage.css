@@ -25,7 +25,7 @@ body {
 
 .logo {
     font-family: 'Press Start 2P', cursive;
-    font-size: 2rem;
+    font-size: 20px;
     font-weight: bold;
     color: #fff;
     margin-right: 2rem;
@@ -213,6 +213,10 @@ nav a:hover {
     padding: 2rem 1rem 2.5rem 1rem;
     box-sizing: border-box;
     text-align: center;
+    margin: 0 auto;
+    flex-direction: column; /* Stack the elements vertically */
+    align-items: center; /* Center horizontally inside the flex container */
+    justify-content: center; /* Center vertically inside the flex container */
 }
 
 .sdu-game-title {
@@ -235,8 +239,7 @@ nav a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-right: 2rem;
-    
+    justify-content: center; /* Center horizontally */
 }
 
 .sdu-game-map {
@@ -249,6 +252,7 @@ nav a:hover {
 .sdu-game-functions {
     flex: 1;
     text-align: left;
+    color: #b39ddb;
     padding-left: 2rem;
 }
 
