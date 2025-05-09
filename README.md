@@ -1,4 +1,5 @@
 # Sxodim.SDU
+<<<<<<< HEAD
 
 Event management system for SDU (Suleyman Demirel University).
 
@@ -77,3 +78,6 @@ npm start
 ## License
 
 MIT
+=======
+Sxodim.SDU is a web-based platform designed to enhance the student experience at SDU.The platform provides interactive features such as a game map, personalized social and academic tools, and real-time updates. It allows students to engage with campus activities, access various university resources, and track their academic progress.
+>>>>>>> 723aeac5370cf83f75c4abbde5733946b61ef998
